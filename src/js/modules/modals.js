@@ -1,4 +1,4 @@
-const modals = () => {
+const modals = () => {    
     function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
         const trigger = document.querySelectorAll(triggerSelector),
               modal = document.querySelector(modalSelector),
@@ -52,6 +52,14 @@ const modals = () => {
         }, time);
     }
 
+/*     function hideModalByTime(selector) {        
+            document.querySelector(selector).style.display = "none";
+            document.body.style.overflow = "";
+        
+    } */
+
+   
+    
           
     bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
     bindModal('.phone_link', '.popup', '.popup .popup_close');
@@ -59,6 +67,8 @@ const modals = () => {
     bindModal('.popup_calc_button', '.popup_calc_profile', '.popup_calc_profile_close', false);
     bindModal('.popup_calc_profile_button', '.popup_calc_end', '.popup_calc_end_close', false);
     /* showModalByTime('.popup', 60000); */
+    
+    
 };
 
 export default modals;

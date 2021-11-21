@@ -17870,6 +17870,7 @@ var changeModalState = function changeModalState(state) {
               });
             } else {
               state[prop] = item.value;
+              console.log(item);
             }
 
             break;
@@ -18019,6 +18020,13 @@ var forms = function forms(state) {
         clearInputs();
         setTimeout(function () {
           statusMessage.remove();
+
+          for (var memberKey in state) {
+            delete state[memberKey];
+          }
+
+          document.querySelector('.popup_calc_end').style.display = "none";
+          document.body.style.overflow = "";
         }, 5000);
       });
     });
@@ -18089,6 +18097,12 @@ var modals = function modals() {
       document.body.style.overflow = "hidden";
     }, time);
   }
+  /*     function hideModalByTime(selector) {        
+              document.querySelector(selector).style.display = "none";
+              document.body.style.overflow = "";
+          
+      } */
+
 
   bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
   bindModal('.phone_link', '.popup', '.popup .popup_close');

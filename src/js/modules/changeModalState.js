@@ -28,6 +28,7 @@ const changeModalState = (state) => {
                             });
                         } else {
                             state[prop] = item.value;
+                            console.log(item);
                         }                        
                         break; 
                     case 'SELECT' :
