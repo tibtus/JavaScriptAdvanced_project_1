@@ -26,17 +26,27 @@ const changeModalState = (state) => {
                                     box.checked = true;
                                 }
                             });
-                        } else {
+                        } else if (!item.value.replace(/\D/)) {
+                            item.style.border = '1px solid red';                            
+                            document.querySelector('.popup_calc_button').style.display = "none";                       
+                            
+                            
+
+                        }  else if (/* state.height.length */ true) {
+                            item.style.border = '';  
+                            document.querySelector('.popup_calc_button').style.display = "inline";
                             state[prop] = item.value;
-                            console.log(item);
-                        }                        
+
+                            
+                        }                      
                         break; 
                     case 'SELECT' :
                         state[prop] = item.value;
                         break;
                 }
 
-                console.log(state);
+                /* console.log(state); */
+                
             });
         });  
 

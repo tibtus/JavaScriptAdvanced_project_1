@@ -52,11 +52,7 @@ const modals = () => {
         }, time);
     }
 
-/*     function hideModalByTime(selector) {        
-            document.querySelector(selector).style.display = "none";
-            document.body.style.overflow = "";
-        
-    } */
+
 
    
     

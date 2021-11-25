@@ -38,6 +38,7 @@ const forms = (state) => {
             statusMessage.classList.add('status');
             item.appendChild(statusMessage);
 
+            
             const formData = new FormData(item);
             if (item.getAttribute('data-calc') === "end") {
                 for (let key in state) {
